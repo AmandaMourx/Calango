@@ -1,0 +1,928 @@
+algoritmo PerfectMatch;
+
+principal
+	// Declarações
+		
+		inteiro resp1, resp_final; 
+		texto ling_games, ling_net, ling_dados, ling_start;
+		texto enter;
+	// Instruções
+
+	//PERGUNTAS
+		faca
+			limpaTela();
+			escreval("                                                        ");
+			escreval("                                                        ");
+			escreval("                                                        ");
+			escreval("           -----------------------------------------    ");
+			escreval("                  P E R F E C T   M A T C H             ");
+			escreval("           -----------------------------------------    ");
+			escreval("                                                        ");
+			escreval("   O programa feito para te ajudar a saber com qual linguagem");
+			escreval("        de programação mais combina com seus interesses      ");
+			escreval("                                                        ");
+			escreval("                                                        ");
+			escreval("           ----------------------------------------->   ");
+			escreval("                PRESSIONE ENTER PARA CONTINUAR         ");
+			leia(enter);
+				faca
+					limpaTela();
+					escreval("                                                        ");
+					escreval("                                                        ");
+					escreval("                                                        ");
+					escreval("           Com qual opção você mais se identififica?    ");
+					escreval("                 'digite o número indicado'             ");
+					escreval("                                                        ");
+					escreval("           (1) Jogar até os olhos caírem                ");
+					escreval("           (2) Ficar horas assistindo vídeo no Youtube  ");
+					escreval("           (3) Ficar horas mexendo no Instagram         ");
+					escreval("           (4) Ficar horas aprendendo coisas novas na internet");			
+					escreval("           (5) Assistir uma série até o corpo pedir arrego");
+					escreval("           (6) Ler um livro até você desidratar         ");
+					escreval("           (7) Não me identifiquei com nenhuma opção    "); 
+					leia (resp1);
+
+					se (resp1 == 1) entao
+						ling_games = qual_ling_games(resp1);
+						se (comparaTexto(ling_games, "C#") == 0)entao
+							limpaTela(); 
+							escreval("                                                        ");
+							escreval("                                                        ");
+							escreval("             ----------------------------   ");
+							escreval("                  R E S U L T A D O         ");
+							escreval("             ----------------------------   ");
+							escreval("             De acordo com suas respostas   ");
+							escreval("       a linguagem  ", ling_games, "  parece ser uma boa opção.");
+							escreval("                                                                  ");
+							escreval("   C# é uma linguagem de programação criada pela Microsoft        ");
+							escreval("   como parte da plataforma .NET. Por ter uma sintaxe parecida    "); 
+							escreval("   com o Java e C++, o C# pode ser indicado mesmo para            "); 
+							escreval("   programadores iniciantes. Com ela podemos criar desde          ");
+							escreval("   aplicações web, desktop, mobile e também jogos eletrônicos.    ");
+							escreval("                                                                  ");
+							escreval("             Boa sorte e Bons Estudos!!!                          ");
+						senao
+							se (comparaTexto(ling_games, "C++") == 0)entao
+								limpaTela(); 
+								escreval("                                                        ");
+								escreval("                                                        ");
+								escreval("             ----------------------------   ");
+								escreval("                  R E S U L T A D O         ");
+								escreval("             ----------------------------   ");
+								escreval("             De acordo com suas respostas   ");
+								escreval("       a linguagem  ", ling_games, "  parece ser uma boa opção.");
+								escreval("                                                                  ");
+								escreval("   C++ é uma poderosa linguagem de programação de propósito geral.");
+								escreval("   Ele pode ser usado para desenvolver sistemas operacionais,     "); 
+								escreval("   navegadores, jogos e assim por diante.                         "); 
+								escreval("   C++ suporta diferentes formas de programação como procedural   ");
+								escreval("   orientada a objetos, funcional e assim por diante.             ");
+								escreval("   Isso torna o C++ poderoso e flexível.                          ");
+								escreval("                                                                  ");
+								escreval("             Boa sorte e Bons Estudos!!!                          ");
+							senao
+								se (comparaTexto(ling_games, "C") == 0)entao
+									limpaTela(); 
+									escreval("                                                        ");
+									escreval("                                                        ");
+									escreval("             ----------------------------   ");
+									escreval("                  R E S U L T A D O         ");
+									escreval("             ----------------------------   ");
+									escreval("             De acordo com suas respostas   ");
+									escreval("       a linguagem  ", ling_games, "  parece ser uma boa opção.");
+									escreval("                                                                  ");
+									escreval("   C é uma linguagem de programação de alto nível e de uso geral, ");
+									escreval("   ideal para desenvolver firmware ou aplicativos portáteis.      "); 
+									escreval("   Originalmente destinado a escrever software de sistema, C foi  "); 
+									escreval("   desenvolvido no Bell Labs por Dennis Ritchie para o sistema    ");
+									escreval("   operacional Unix no início dos anos 1970.                      ");
+									escreval("                                                                  ");
+									escreval("             Boa sorte e Bons Estudos!!!                          ");
+								senao
+									se (comparaTexto(ling_games, "Python") == 0)entao
+										limpaTela(); 
+										escreval("                                                        ");
+										escreval("                                                        ");
+										escreval("             ----------------------------   ");
+										escreval("                  R E S U L T A D O         ");
+										escreval("             ----------------------------   ");
+										escreval("             De acordo com suas respostas   ");
+										escreval("       a linguagem  ", ling_games, "  parece ser uma boa opção.");
+										escreval("                                                                  ");
+										escreval("   Python é uma linguagem de programação de computador            ");
+										escreval("   frequentemente usada para criar sites e softwares,  "); 
+										escreval("   automatizar tarefas e realizar análises de dados.  "); 
+										escreval("                                                                  ");
+										escreval("             Boa sorte e Bons Estudos!!!                          ");
+									senao
+										se (comparaTexto(ling_games, "Kotlin") == 0)entao
+											limpaTela(); 
+											escreval("                                                        ");
+											escreval("                                                        ");
+											escreval("             ----------------------------   ");
+											escreval("                  R E S U L T A D O         ");
+											escreval("             ----------------------------   ");
+											escreval("             De acordo com suas respostas   ");
+											escreval("       a linguagem  ", ling_games, "  parece ser uma boa opção.");
+											escreval("                                                                   ");
+											escreval("   Kotlin é uma linguagem de programação “pragmática” de uso geral,");
+											escreval("   gratuita, de código aberto, tipada estaticamente, inicialmente  "); 
+											escreval("   projetada para a JVM (Java Virtual Machine)e Android que combina");
+											escreval("   recursos de programação orientados a objetos e funcionais.      "); 
+											escreval("                                                                   ");
+											escreval("             Boa sorte e Bons Estudos!!!                           ");
+										fimSe
+									fimSe
+								fimSe
+							fimSe
+						fimSe	
+					senao
+						se (resp1 == 2 ou resp1 == 3 ou resp1 == 4) entao
+							ling_net = qual_ling_net(resp1); 
+							se (comparaTexto(ling_net, "Kotlin") == 0)entao
+								limpaTela(); 
+								escreval("                                                        ");
+								escreval("                                                        ");
+								escreval("             ----------------------------   ");
+								escreval("                  R E S U L T A D O         ");
+								escreval("             ----------------------------   ");
+								escreval("             De acordo com suas respostas   ");
+								escreval("       a linguagem  ", ling_net, "  parece ser uma boa opção.");
+								escreval("                                                                   ");
+								escreval("   Kotlin é uma linguagem de programação “pragmática” de uso geral,");
+								escreval("   gratuita, de código aberto, tipada estaticamente, inicialmente  "); 
+								escreval("   projetada para a JVM (Java Virtual Machine)e Android que combina");
+								escreval("   recursos de programação orientados a objetos e funcionais.      "); 
+								escreval("                                                                   ");
+								escreval("             Boa sorte e Bons Estudos!!!                           ");
+							senao 
+								se (comparaTexto(ling_net, "Python") == 0)entao
+									limpaTela(); 
+									escreval("                                                        ");
+									escreval("                                                        ");
+									escreval("             ----------------------------   ");
+									escreval("                  R E S U L T A D O         ");
+									escreval("             ----------------------------   ");
+									escreval("             De acordo com suas respostas   ");
+									escreval("       a linguagem  ", ling_net, "  parece ser uma boa opção.");
+									escreval("                                                                  ");
+									escreval("   Python é uma linguagem de programação de computador            ");
+									escreval("   frequentemente usada para criar sites e softwares,  "); 
+									escreval("   automatizar tarefas e realizar análises de dados.  "); 
+									escreval("                                                                  ");
+									escreval("              Boa sorte e Bons Estudos!!!                         ");	
+								senao
+									se	(comparaTexto(ling_net, "JavaScript") == 0)entao
+										limpaTela(); 
+										escreval("                                                        ");
+										escreval("                                                        ");
+										escreval("             ----------------------------   ");
+										escreval("                  R E S U L T A D O         ");
+										escreval("             ----------------------------   ");
+										escreval("             De acordo com suas respostas   ");
+										escreval("       a linguagem  ", ling_net, "  parece ser uma boa opção.");
+										escreval("                                                                  ");
+										escreval("   Javascript, ou simplesmente JS, é uma linguagem de programação ");
+										escreval("   de uso geral, aplicada principalmente para desenvolvimento web e"); 
+										escreval("   desenvolvimento de software. Especificando mais, o Javascript atua");
+										escreval("   na programação front-end, — a parte “visual” de um site ou app."); 
+										escreval("                                                                  ");
+										escreval("              Boa sorte e Bons Estudos!!!                         ");
+									senao
+										se (comparaTexto(ling_net, "Go") == 0)entao
+											limpaTela(); 
+											escreval("                                                        ");
+											escreval("                                                        ");
+											escreval("             ----------------------------   ");
+											escreval("                  R E S U L T A D O         ");
+											escreval("             ----------------------------   ");
+											escreval("             De acordo com suas respostas   ");
+											escreval("       a linguagem  ", ling_net, "  parece ser uma boa opção.      ");
+											escreval("                                                                   ");
+											escreval("   Golang ou Go é uma linguagem de programação estaticamente       ");
+											escreval("   tipada  e procedural com sintaxe semelhante à  linguagem C.     "); 
+											escreval("   Foi desenvolvido em 2007 por Robert Griesemer, Rob Pike e       ");
+											escreval("   Ken Thompson no Google.                                         "); 
+											escreval("                                                                  ");
+											escreval("              Boa sorte e Bons Estudos!!!                         ");
+										senao
+											se (comparaTexto(ling_net, "PHP") == 0)entao
+												limpaTela(); 
+												escreval("                                                        ");
+												escreval("                                                        ");
+												escreval("             ----------------------------   ");
+												escreval("                  R E S U L T A D O         ");
+												escreval("             ----------------------------   ");
+												escreval("             De acordo com suas respostas   ");
+												escreval("       a linguagem  ", ling_net, "  parece ser uma boa opção.      ");
+												escreval("                                                                   ");
+												escreval("   O PHP é uma linguagem de programação voltada originalmente para ");
+												escreval("   desenvolvimento de sites e aplicações web. Por ser de código    "); 
+												escreval("   aberto e de fácil aprendizado, é uma das mais populares do mundo.");
+												escreval("                                                                  ");
+												escreval("              Boa sorte e Bons Estudos!!!                         ");
+											senao
+												se (comparaTexto(ling_net, "Flutter") == 0)entao
+													limpaTela(); 
+													escreval("                                                        ");
+													escreval("                                                        ");
+													escreval("             ----------------------------   ");
+													escreval("                  R E S U L T A D O         ");
+													escreval("             ----------------------------   ");
+													escreval("             De acordo com suas respostas   ");
+													escreval("       a linguagem  ", ling_net, "  parece ser uma boa opção.      ");
+													escreval("                                                                   ");
+													escreval("   Flutter é uma estrutura de desenvolvimento de aplicativos móveis");
+													escreval("   de código aberto criada pelo Google. É usado para desenvolver   "); 
+													escreval("   aplicativos para Android e iOS, além de ser o principal método ");
+													escreval("   de criação de aplicativos para o Google Fuchsia.");
+													escreval("                                                                  ");
+													escreval("              Boa sorte e Bons Estudos!!!                         ");
+												senao
+													se (comparaTexto(ling_net, "Java") == 0)entao
+														limpaTela(); 
+														escreval("                                                        ");
+														escreval("                                                        ");
+														escreval("             ----------------------------   ");
+														escreval("                  R E S U L T A D O         ");
+														escreval("             ----------------------------   ");
+														escreval("             De acordo com suas respostas   ");
+														escreval("       a linguagem  ", ling_net, "  parece ser uma boa opção.      ");
+														escreval("                                                                   ");
+														escreval("   Java é uma linguagem de programação e plataforma de computação  ");
+														escreval("   liberada pela primeira vez pela Sun Microsystems em 1995.  "); 
+														escreval("   De um início humilde, ela evoluiu para uma grande participação ");
+														escreval("   no mundo digital dos dias atuais, oferecendo a plataforma ");
+														escreval("   confiável na qual muitos serviços e aplicativos são desenvolvidos.");
+														escreval("                                                                  ");
+														escreval("              Boa sorte e Bons Estudos!!!                         ");
+													senao
+														se (comparaTexto(ling_net, "Swift") == 0)entao
+															limpaTela(); 
+															escreval("                                                        ");
+															escreval("                                                        ");
+															escreval("             ----------------------------   ");
+															escreval("                  R E S U L T A D O         ");
+															escreval("             ----------------------------   ");
+															escreval("             De acordo com suas respostas   ");
+															escreval("       a linguagem  ", ling_net, "  parece ser uma boa opção.      ");
+															escreval("                                                                   ");
+															escreval("   Swift é uma linguagem de programação robusta e intuitiva  ");
+															escreval("   criada pela Apple para a construção de aplicativos para iOS,"); 
+															escreval("   Mac, Apple TV e Apple Watch. Ela foi projetada para oferecer");
+															escreval("   mais liberdade do que nunca aos desenvolvedores. Swift é fácil ");
+															escreval("   de usar e de código aberto, então qualquer pessoa com uma ideia");
+															escreval("   pode criar algo incrível.                                      ");
+															escreval("                                                                  ");
+															escreval("              Boa sorte e Bons Estudos!!!                         ");
+														fimSe
+													fimSe
+												fimSe
+											fimSe
+										fimSe
+									fimSe
+								fimSe		
+							fimSe	
+						senao
+							se (resp1 == 5 ou resp1 == 6) entao
+								ling_dados = qual_ling_dados(resp1);
+								se (comparaTexto(ling_dados, "Python") == 0)entao
+									limpaTela(); 
+									escreval("                                                        ");
+									escreval("                                                        ");
+									escreval("             ----------------------------   ");
+									escreval("                  R E S U L T A D O         ");
+									escreval("             ----------------------------   ");
+									escreval("             De acordo com suas respostas   ");
+									escreval("       a linguagem  ", ling_dados, "  parece ser uma boa opção.");
+									escreval("                                                                  ");
+									escreval("   Python é uma linguagem de programação de computador            ");
+									escreval("   frequentemente usada para criar sites e softwares,  "); 
+									escreval("   automatizar tarefas e realizar análises de dados.  "); 
+									escreval("                                                                  ");
+									escreval("              Boa sorte e Bons Estudos!!!                         ");	
+								senao
+									se (comparaTexto(ling_dados, "Java") == 0)entao
+										limpaTela(); 
+										escreval("                                                        ");
+										escreval("                                                        ");
+										escreval("             ----------------------------   ");
+										escreval("                  R E S U L T A D O         ");
+										escreval("             ----------------------------   ");
+										escreval("             De acordo com suas respostas   ");
+										escreval("       a linguagem  ", ling_dados, "  parece ser uma boa opção.      ");
+										escreval("                                                                   ");
+										escreval("   Java é uma linguagem de programação e plataforma de computação  ");
+										escreval("   liberada pela primeira vez pela Sun Microsystems em 1995.  "); 
+										escreval("   De um início humilde, ela evoluiu para uma grande participação ");
+										escreval("   no mundo digital dos dias atuais, oferecendo a plataforma ");
+										escreval("   confiável na qual muitos serviços e aplicativos são desenvolvidos.");
+										escreval("                                                                  ");
+										escreval("              Boa sorte e Bons Estudos!!!                         ");		
+									senao
+										se (comparaTexto(ling_dados, "Flutter") == 0)entao
+											limpaTela(); 
+											escreval("                                                        ");
+											escreval("                                                        ");
+											escreval("             ----------------------------   ");
+											escreval("                  R E S U L T A D O         ");
+											escreval("             ----------------------------   ");
+											escreval("             De acordo com suas respostas   ");
+											escreval("       a linguagem  ", ling_dados, "  parece ser uma boa opção.      ");
+											escreval("                                                                   ");
+											escreval("   Flutter é uma estrutura de desenvolvimento de aplicativos móveis");
+											escreval("   de código aberto criada pelo Google. É usado para desenvolver   "); 
+											escreval("   aplicativos para Android e iOS, além de ser o principal método ");
+											escreval("   de criação de aplicativos para o Google Fuchsia. ");
+											escreval("                                                                  ");
+											escreval("              Boa sorte e Bons Estudos!!!                         ");
+										senao
+											se (comparaTexto(ling_dados, "C") == 0)entao
+												limpaTela(); 
+												escreval("                                                        ");
+												escreval("                                                        ");
+												escreval("             ----------------------------   ");
+												escreval("                  R E S U L T A D O         ");
+												escreval("             ----------------------------   ");
+												escreval("             De acordo com suas respostas   ");
+												escreval("       a linguagem  ", ling_dados, "  parece ser uma boa opção.");
+												escreval("                                                                  ");
+												escreval("   C é uma linguagem de programação de alto nível e de uso geral, ");
+												escreval("   ideal para desenvolver firmware ou aplicativos portáteis.      "); 
+												escreval("   Originalmente destinado a escrever software de sistema, C foi  "); 
+												escreval("   desenvolvido no Bell Labs por Dennis Ritchie para o sistema    ");
+												escreval("   operacional Unix no início dos anos 1970.                      ");
+												escreval("                                                                  ");
+												escreval("             Boa sorte e Bons Estudos!!!                          ");	
+											senao
+												se (comparaTexto(ling_dados, "SQL") == 0)entao
+													limpaTela(); 
+													escreval("                                                        ");
+													escreval("                                                        ");
+													escreval("             ----------------------------   ");
+													escreval("                  R E S U L T A D O         ");
+													escreval("             ----------------------------   ");
+													escreval("             De acordo com suas respostas   ");
+													escreval("       a linguagem  ", ling_dados, "  parece ser uma boa opção.");
+													escreval("                                                                  ");
+													escreval("   SQL é uma linguagem de computador para trabalhar ");
+													escreval("   com conjuntos de fatos e, as relações entre eles. "); 
+													escreval("   Programas de banco de dados como Microsoft  "); 
+													escreval("   Office Access, usam SQL para trabalhar com dados.");
+													escreval("                                                                  ");
+													escreval("             Boa sorte e Bons Estudos!!!                          ");
+												senao
+													se (comparaTexto(ling_dados, "R") == 0)entao
+														limpaTela(); 
+														escreval("                                                        ");
+														escreval("                                                        ");
+														escreval("             ----------------------------   ");
+														escreval("                  R E S U L T A D O         ");
+														escreval("             ----------------------------   ");
+														escreval("             De acordo com suas respostas   ");
+														escreval("       a linguagem  ", ling_dados, "  parece ser uma boa opção.");
+														escreval("                                                                  ");
+														escreval("   A linguagem R é largamente usada entre estatísticos e          ");
+														escreval("   analistas de dados para desenvolver software de estatística    "); 
+														escreval("   e análise de dados.                                            "); 
+														escreval("                                                                  ");
+														escreval("             Boa sorte e Bons Estudos!!!                          ");
+													fimSe
+												fimSe
+											fimSe		
+										fimSe
+									fimSe	
+								fimSe
+							senao
+								se (resp1 == 7)entao
+									ling_start = qual_ling_start(resp1);
+									se (comparaTexto(ling_start, "nao")== 0) entao
+										limpaTela();
+										escreval("                                                        ");
+										escreval("                                                        ");
+										escreval("             ----------------------------   ");
+										escreval("                  R E S U L T A D O         ");
+										escreval("             ----------------------------   ");
+										escreval("                                            ");
+										escreval("                                            ");
+										escreval("        Então procure fazer aquilo que gosta :)");
+									senao
+										se (comparaTexto(ling_start, "SQL") == 0)entao
+											limpaTela(); 
+											escreval("                                                        ");
+											escreval("                                                        ");
+											escreval("             ----------------------------   ");
+											escreval("                  R E S U L T A D O         ");
+											escreval("             ----------------------------   ");
+											escreval("             De acordo com suas respostas   ");
+											escreval("       a linguagem  ", ling_start, "  parece ser uma boa opção.");
+											escreval("                                                                  ");
+											escreval("   SQL é uma linguagem de computador para trabalhar ");
+											escreval("   com conjuntos de fatos e, as relações entre eles. "); 
+											escreval("   Programas de banco de dados como Microsoft  "); 
+											escreval("   Office Access, usam SQL para trabalhar com dados.");
+											escreval("                                                                  ");
+											escreval("             Boa sorte e Bons Estudos!!!                          ");
+										senao
+											se (comparaTexto(ling_start, "R") == 0)entao
+												limpaTela(); 
+												escreval("                                                        ");
+												escreval("                                                        ");
+												escreval("             ----------------------------   ");
+												escreval("                  R E S U L T A D O         ");
+												escreval("             ----------------------------   ");
+												escreval("             De acordo com suas respostas   ");
+												escreval("       a linguagem  ", ling_start, "  parece ser uma boa opção.");
+												escreval("                                                                  ");
+												escreval("   A linguagem R é largamente usada entre estatísticos e          ");
+												escreval("   analistas de dados para desenvolver software de estatística    "); 
+												escreval("   e análise de dados.                                            "); 
+												escreval("                                                                  ");
+												escreval("             Boa sorte e Bons Estudos!!!                          ");
+											senao
+												se (comparaTexto(ling_start, "Python") == 0)entao
+													limpaTela(); 
+													escreval("                                                        ");
+													escreval("                                                        ");
+													escreval("             ----------------------------   ");
+													escreval("                  R E S U L T A D O         ");
+													escreval("             ----------------------------   ");
+													escreval("             De acordo com suas respostas   ");
+													escreval("       a linguagem  ", ling_start, "  parece ser uma boa opção.");
+													escreval("                                                                  ");
+													escreval("   Python é uma linguagem de programação de computador            ");
+													escreval("   frequentemente usada para criar sites e softwares,  "); 
+													escreval("   automatizar tarefas e realizar análises de dados. "); 
+													escreval("                                                                  ");
+													escreval("              Boa sorte e Bons Estudos!!!                         ");
+												senao
+													se (comparaTexto(ling_start, "PHP") == 0)entao
+														limpaTela(); 
+														escreval("                                                        ");
+														escreval("                                                        ");
+														escreval("             ----------------------------   ");
+														escreval("                  R E S U L T A D O         ");
+														escreval("             ----------------------------   ");
+														escreval("             De acordo com suas respostas   ");
+														escreval("       a linguagem  ", ling_start, "  parece ser uma boa opção.      ");
+														escreval("                                                                   ");
+														escreval("   O PHP é uma linguagem de programação voltada originalmente para ");
+														escreval("   desenvolvimento de sites e aplicações web. Por ser de código    "); 
+														escreval("   aberto e de fácil aprendizado, é uma das mais populares do mundo.");
+														escreval("                                                                  ");
+														escreval("              Boa sorte e Bons Estudos!!!                         ");
+													senao
+														se	(comparaTexto(ling_start, "JavaScript") == 0)entao
+															limpaTela(); 
+															escreval("                                                        ");
+															escreval("                                                        ");
+															escreval("             ----------------------------   ");
+															escreval("                  R E S U L T A D O         ");
+															escreval("             ----------------------------   ");
+															escreval("             De acordo com suas respostas   ");
+															escreval("       a linguagem  ", ling_start, "  parece ser uma boa opção.");
+															escreval("                                                                  ");
+															escreval("   Javascript, ou simplesmente JS, é uma linguagem de programação ");
+															escreval("   de uso geral, aplicada principalmente para desenvolvimento web e"); 
+															escreval("   desenvolvimento de software. Especificando mais, o Javascript atua");
+															escreval("   na programação front-end, — a parte “visual” de um site ou app."); 
+															escreval("                                                                  ");
+															escreval("              Boa sorte e Bons Estudos!!!                         ");
+														senao
+															se (comparaTexto(ling_start, "Flutter") == 0)entao
+																limpaTela(); 
+																escreval("                                                        ");
+																escreval("                                                        ");
+																escreval("             ----------------------------   ");
+																escreval("                  R E S U L T A D O         ");
+																escreval("             ----------------------------   ");
+																escreval("             De acordo com suas respostas   ");
+																escreval("       a linguagem  ", ling_start, "  parece ser uma boa opção.      ");
+																escreval("                                                                   ");
+																escreval("   Flutter é uma estrutura de desenvolvimento de aplicativos móveis");
+																escreval("   de código aberto criada pelo Google. É usado para desenvolver   "); 
+																escreval("   aplicativos para Android e iOS, além de ser o principal método ");
+																escreval("   de criação de aplicativos para o Google Fuchsia.");
+																escreval("                                                                  ");
+																escreval("              Boa sorte e Bons Estudos!!!                         ");
+															senao
+																se (comparaTexto(ling_start, "Java") == 0)entao
+																	limpaTela(); 
+																	escreval("                                                        ");
+																	escreval("                                                        ");
+																	escreval("             ----------------------------   ");
+																	escreval("                  R E S U L T A D O         ");
+																	escreval("             ----------------------------   ");
+																	escreval("             De acordo com suas respostas   ");
+																	escreval("       a linguagem  ", ling_start, "  parece ser uma boa opção.      ");
+																	escreval("                                                                   ");
+																	escreval("   Java é uma linguagem de programação e plataforma de computação  ");
+																	escreval("   liberada pela primeira vez pela Sun Microsystems em 1995.  "); 
+																	escreval("   De um início humilde, ela evoluiu para uma grande participação ");
+																	escreval("   no mundo digital dos dias atuais, oferecendo a plataforma ");
+																	escreval("   confiável na qual muitos serviços e aplicativos são desenvolvidos.");
+																	escreval("                                                                  ");
+																	escreval("              Boa sorte e Bons Estudos!!!                         ");		
+																senao
+																	se (comparaTexto(ling_start, "Kotlin") == 0)entao
+																		limpaTela(); 
+																		escreval("                                                        ");
+																		escreval("                                                        ");
+																		escreval("             ----------------------------   ");
+																		escreval("                  R E S U L T A D O         ");
+																		escreval("             ----------------------------   ");
+																		escreval("             De acordo com suas respostas   ");
+																		escreval("       a linguagem  ", ling_start, "  parece ser uma boa opção.");
+																		escreval("                                                                   ");
+																		escreval("   Kotlin é uma linguagem de programação “pragmática” de uso geral,");
+																		escreval("   gratuita, de código aberto, tipada estaticamente, inicialmente  "); 
+																		escreval("   projetada para a JVM (Java Virtual Machine)e Android que combina");
+																		escreval("   recursos de programação orientados a objetos e funcionais.      "); 
+																		escreval("                                                                   ");
+																		escreval("             Boa sorte e Bons Estudos!!!                           ");
+																	senao
+																		se (comparaTexto(ling_start, "Swift") == 0)entao
+																			limpaTela(); 
+																			escreval("                                                        ");
+																			escreval("                                                        ");
+																			escreval("             ----------------------------   ");
+																			escreval("                  R E S U L T A D O         ");
+																			escreval("             ----------------------------   ");
+																			escreval("             De acordo com suas respostas   ");
+																			escreval("       a linguagem  ", ling_start, "  parece ser uma boa opção.      ");
+																			escreval("                                                                   ");
+																			escreval("   Swift é uma linguagem de programação robusta e intuitiva  ");
+																			escreval("   criada pela Apple para a construção de aplicativos para iOS,"); 
+																			escreval("   Mac, Apple TV e Apple Watch. Ela foi projetada para oferecer");
+																			escreval("   mais liberdade do que nunca aos desenvolvedores. Swift é fácil ");
+																			escreval("   de usar e de código aberto, então qualquer pessoa com uma ideia");
+																			escreval("   pode criar algo incrível.                                      ");
+																			escreval("                                                                  ");
+																			escreval("              Boa sorte e Bons Estudos!!!                         "); 
+																		senao
+																			se (comparaTexto(ling_start, "C") == 0)entao
+																				limpaTela(); 
+																				escreval("                                                        ");
+																				escreval("                                                        ");
+																				escreval("             ----------------------------   ");
+																				escreval("                  R E S U L T A D O         ");
+																				escreval("             ----------------------------   ");
+																				escreval("             De acordo com suas respostas   ");
+																				escreval("       a linguagem  ", ling_start, "  parece ser uma boa opção.");
+																				escreval("                                                                  ");
+																				escreval("   C é uma linguagem de programação de alto nível e de uso geral, ");
+																				escreval("   ideal para desenvolver firmware ou aplicativos portáteis.      "); 
+																				escreval("   Originalmente destinado a escrever software de sistema, C foi  "); 
+																				escreval("   desenvolvido no Bell Labs por Dennis Ritchie para o sistema    ");
+																				escreval("   operacional Unix no início dos anos 1970.                      ");
+																				escreval("                                                                  ");
+																				escreval("             Boa sorte e Bons Estudos!!!                          ");
+																			senao
+																				se (comparaTexto(ling_start, "Portugol") == 0)entao
+																					limpaTela(); 
+																					escreval("                                                        ");
+																					escreval("                                                        ");
+																					escreval("             ----------------------------   ");
+																					escreval("                  R E S U L T A D O         ");
+																					escreval("             ----------------------------   ");
+																					escreval("             De acordo com suas respostas   ");
+																					escreval("       a linguagem  ", ling_start, "  parece ser uma boa opção.");
+																					escreval("                                                                  ");
+																					escreval("   O Portugol é uma pseudo-linguagem algorítmica muito   ");
+																					escreval("   utilizada na descrição de algoritmos, destaca-se pelo "); 
+																					escreval("    uso de comandos em  português, o que facilita o aprendizado da lógica de programação,"); 
+																					escreval("   habituando o iniciante com o formalismo de programação.        ");
+																					escreval("                                                                  ");
+																					escreval("             Boa sorte e Bons Estudos!!!                          ");		
+																				fimSe
+																			fimSe
+																		fimSe
+																	fimSe
+																fimSe
+															fimSe
+														fimSe
+													fimSe
+												fimSe
+											fimSe
+										fimSe	
+									fimSe
+								fimSe 
+							fimSe
+						fimSe
+					fimSe
+				enquanto(resp1 != 1 e resp1 != 2 e resp1 != 3 e resp1 != 4 e resp1 != 5 e resp1 != 6 e resp1 != 7);
+			escreval("                                                          ");
+			escreval("                                                          ");
+			escreval("               Deseja tentar outra vez?                   ");
+			escreval("              'digite o número indicado'                  ");
+			escreval("                                                          ");
+			escreval("               (1) SIM                                    ");
+			escreval("               (2) NAO                                    ");
+			leia(resp_final);
+		enquanto(resp_final == 1);
+		escreval("                                                              ");
+		escreval("             Boa Sorte na sua trajetória!!!                   ");
+		
+fimPrincipal
+	funcao texto qual_ling_games (inteiro resp1)
+		inteiro resp1_1, posi_ling;
+		texto ling_games;
+		texto a [3];
+		texto a1[4];
+		texto a2[3];
+		a[0]= "C#";
+		a[1]= "C++";
+		a[2]= "C";
+		a1[0]= "C#";
+		a1[1]= "C++";
+		a1[2]= "C";
+		a1[3]= "Python";
+		a2[0]= "Kotlin";
+		a2[1]= "C#";
+		a2[2]= "C++";
+		
+		//instruções
+			faca
+				limpaTela();
+				escreval("                                                        ");
+				escreval("                                                        ");
+				escreval("            Onde você mais gosta de jogar?          ");
+				escreval("             'digite o número indicado'             ");
+				escreval("                                                    ");
+				escreval("            (1) XBOX                                   ");
+				escreval("            (2) PlayStation                            ");
+				escreval("            (3) Nintendo                               ");
+				escreval("            (4) Celular                                ");			
+				escreval("            (5) PC                                     ");
+				leia(resp1_1);
+			enquanto(resp1_1 != 1 e resp1_1 != 2 e resp1_1 != 3 e resp1_1 != 4 e resp1_1 != 5);
+			
+			se (resp1_1 == 1) entao
+				posi_ling = aleatorio(3);
+				ling_games = a[posi_ling];
+			senao
+				se (resp1_1 == 2) entao
+					posi_ling = aleatorio(3);
+					ling_games = a[posi_ling];
+				senao
+					se (resp1_1 == 3) entao
+						posi_ling = aleatorio(3);
+						ling_games = a[posi_ling];
+					senao
+						se (resp1_1 == 4) entao
+							posi_ling = aleatorio(3);
+							ling_games = a2[posi_ling];
+						senao
+							se (resp1_1 == 5) entao
+								posi_ling = aleatorio(4);
+								ling_games = a1[posi_ling];
+							fimSe
+						fimSe
+					fimSe
+				fimSe
+			fimSe
+		retorna ling_games;
+	fimFuncao
+
+	funcao texto qual_ling_net (inteiro resp1)
+		inteiro resp1_2, posi_ling, resp1_2_1;
+		texto ling_net;
+		texto b [2];
+		texto e1[3];
+		texto f [4];
+		texto g [2];
+		b[0]= "JavaScript";
+		b[1]= "Go";
+		e1[0]= "PHP";
+		e1[1]= "JavaScript";
+		e1[2]= "Flutter";
+		f[0]= "Kotlin";
+		f[1]= "Java";
+		f[2]= "Flutter";
+		f[3]= "Swift";
+		g[0]= "Java";
+		g[1]= "Python";
+		//instruções
+			faca
+				limpaTela();
+				escreval("                                                        ");
+				escreval("         Entre esses, qual assunto você mais se interessaria?    ");
+				escreval("                    'digite o número indicado'                   ");
+				escreval("                                                                 ");
+				escreval("           (1) Design                                 ");
+				escreval("           (2) Vendas Online                          ");
+				escreval("           (3) Aplicativos                            ");
+				escreval("           (4) Automatização de Tarefas               ");			
+				escreval("           (5) Empreendorismo                         ");
+				leia(resp1_2);
+			enquanto(resp1_2 != 1 e resp1_2 != 2 e resp1_2 != 3 e resp1_2 != 4 e resp1_2 != 5);
+			
+			se (resp1_2 == 1) entao
+				posi_ling = aleatorio(2);
+				ling_net = b[posi_ling];
+			senao
+				se (resp1_2 == 2) entao
+					posi_ling = aleatorio(3);
+					ling_net = e1[posi_ling];
+				senao
+					se (resp1_2 == 3) entao
+						faca
+							escreval("                                                        ");
+							escreval("                                                        ");
+							escreval("           Você gosta mais de IOS ou Android?           ");
+							escreval("              'digite o número indicado'                ");
+							escreval("                                                        ");
+							escreval("              (1) IOS                                   ");
+							escreval("              (2) Android                                ");
+							leia(resp1_2_1);
+						enquanto(resp1_2_1 != 1 e resp1_2_1 != 2);
+						se (resp1_2_1 == 1)entao
+							ling_net = f[3];
+						senao
+							posi_ling = aleatorio(3);
+							ling_net = f[posi_ling];
+						fimSe
+					senao
+						se (resp1_2 == 4) entao
+							posi_ling = aleatorio(2);
+							ling_net = g[posi_ling];
+						senao
+							se (resp1_2 == 5) entao
+								posi_ling = aleatorio(2);
+								ling_net = b[posi_ling];
+							fimSe
+						fimSe
+					fimSe
+				fimSe
+			fimSe
+		retorna ling_net;
+	fimFuncao
+
+	funcao texto qual_ling_dados (inteiro resp1)
+		inteiro resp1_3, posi_ling;
+		texto ling_dados;
+		texto c [1];
+		texto d [2];
+		texto g [2];
+		texto h [3];
+		c[0]= "SQL";
+		d[0]= "R";
+		d[1]= "Python";
+		g[0]= "Java";
+		g[1]= "Python";
+		h[0]= "Java";
+		h[1]= "Flutter";
+		h[2]= "C";
+		
+		//instruções
+			faca
+				limpaTela();
+				escreval("                                                        ");
+				escreval("                                                        ");
+				escreval("          Entre esses, de qual gênero você mais gosta?               ");
+				escreval("                  'digite o número indicado'                         ");
+				escreval("                                                                     ");
+				escreval("           (1) Mistério                                              ");
+				escreval("           (2) Ação                                                  ");
+				escreval("           (3) Suspense                                              ");
+				escreval("           (4) Drama                                                 ");			
+				leia(resp1_3);
+			enquanto(resp1_3 != 1 e resp1_3 != 2 e resp1_3 != 3 e resp1_3 != 4);
+				
+			se (resp1_3 == 1) entao
+				posi_ling = aleatorio(2);
+				ling_dados = d[posi_ling];
+			senao
+				se (resp1_3 == 2) entao
+					posi_ling = aleatorio(3);
+					ling_dados = h[posi_ling];
+				senao
+					se (resp1_3 == 3) entao
+						ling_dados = c[0];
+					senao
+						se (resp1_3 == 4) entao
+							posi_ling = aleatorio(2);
+							ling_dados = g[posi_ling];
+						fimSe
+					fimSe
+				fimSe
+			fimSe
+		retorna ling_dados;
+	fimFuncao
+
+	funcao texto qual_ling_start(inteiro resp1)
+		inteiro resp1_4, resp1_4_1, resp1_4_2, resp1_4_1_0, posi_ling;
+		texto ling_start;
+		texto c [1];
+		texto d [2];
+		texto f [4];
+		texto e1[3];
+		texto h [3];
+		texto i [1];
+		c[0]= "SQL";
+		d[0]= "R";
+		d[1]= "Python";
+		f[0]= "Kotlin";
+		f[1]= "Java";
+		f[2]= "Flutter";
+		f[3]= "Swift";
+		e1[0]= "PHP";
+		e1[1]= "JavaScript";
+		e1[2]= "Flutter";
+		h[0]= "Java";
+		h[1]= "Flutter";
+		h[2]= "C";
+		i[0]= "Portugol";
+		
+		//instruções
+			faca
+				limpaTela();
+				escreval("                                                        ");
+				escreval("                                                        ");
+				escreval("        Você tem vontade de ser programador(a)?           ");
+				escreval("              'digite o número indicado'                  ");
+				escreval("                                                          ");
+				escreval("      (1) SIM                                             ");
+				escreval("      (2) NÃO                                             ");
+				leia(resp1_4);
+			enquanto(resp1_4 != 1 e resp1_4 != 2);
+			
+			se (resp1_4 == 2) entao
+				escreval("                                                        ");
+				escreval("                                                        ");
+				ling_start= "nao";
+			senao 
+				se(resp1_4 == 1) entao
+					faca
+						limpaTela();
+						escreval("                                                        ");
+						escreval("                                                        ");
+						escreval("  Já possui experiência com o básico da lógica de programação?  ");
+						escreval("                 'digite o número indicado'                     ");
+						escreval("                                                                ");
+						escreval("      (1) SIM                                                   ");
+						escreval("      (2) NÃO                                                   ");
+						leia (resp1_4_1_0);
+					enquanto(resp1_4_1_0 != 1 e resp1_4_1_0 != 2);
+					
+					se (resp1_4_1_0 == 2) entao
+						ling_start= i[0];
+					senao
+						se (resp1_4_1_0 == 1) entao
+							faca
+								limpaTela();
+								escreval("                                                        ");
+								escreval("                                                        ");
+								escreval("Entre essas, que área da tecnologia você gostaria de atuar?");
+								escreval("              'digite o número indicado'                   ");
+								escreval("                                                           ");
+								escreval("      (1) Mobile (Aplicativos)                             ");
+								escreval("      (2) Desenvolvimetno de Software                      ");
+								escreval("      (3) Desenvolvimento WEB                              ");
+								escreval("      (4) Analista de Dados ou Inteligência Artificial     ");
+								leia(resp1_4_1);
+							enquanto(resp1_4_1 != 1 e resp1_4_1 != 2 e resp1_4_1 != 3 e resp1_4_1 != 4);
+							
+							se (resp1_4_1 == 1) entao
+								faca
+									limpaTela();
+									escreval("                                                        ");
+									escreval("                                                        ");
+									escreval("    Você gosta mais de IOS ou Android?           ");
+									escreval("       'digite o número indicado'                ");
+									escreval("                                                 ");
+									escreval("      (1) IOS                                    ");
+									escreval("      (2) Android                                ");
+									leia(resp1_4_2);
+								enquanto(resp1_4_2 != 1 e resp1_4_2 != 2);
+							se (resp1_4_2 == 1)entao
+								ling_start = f[3];
+							senao
+								se (resp1_4_2 == 2)entao
+									posi_ling = aleatorio(4);
+									ling_start= f[posi_ling];
+								fimSe
+							fimSe
+						senao
+							se (resp1_4_1 == 2) entao
+								posi_ling = aleatorio(3);
+								ling_start = h[posi_ling];
+							senao
+								se (resp1_4_1 == 3) entao
+									posi_ling = aleatorio(3);
+									ling_start = e1[posi_ling];
+								senao
+									se (resp1_4_1 == 4) entao
+										posi_ling = aleatorio(2);
+										ling_start = d[posi_ling];
+									fimSe
+								fimSe
+							fimSe
+						fimSe
+					fimSe
+				fimSe
+				fimSe
+			fimSe
+		retorna ling_start;
+	fimFuncao
+
